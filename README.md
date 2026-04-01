@@ -1,2 +1,2 @@
 # Dev_tests
-Repository off study about software tests and learn.
+Repository for studying test development.
