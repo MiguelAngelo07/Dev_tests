@@ -24,3 +24,18 @@ def simulador_download():
 
 simulador_download()
 
+def executar_com_retry(func, tentativas=3):
+    for tentativa in range(1, tentativas + 1):
+        print(f"Tentativa {tentativas}...")
+
+        sucesso = func()
+
+        if sucesso:
+            return True
+        
+        print("tentando novamente...\n")
+
+    print(" Falha após várias tentativas.")
+    return False
+
+executar_com_retry(simulador_download, tentativas=3)
